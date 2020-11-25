@@ -358,7 +358,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return false;
 }
 
-#ifdef KEYBOARD_planck_ez
+#ifdef KEYBOARD_olkb_planck_ez
 
 #define LED_BRIGHTNESS 50
 
@@ -381,4 +381,4 @@ layer_state_t default_layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-#endif /* KEYBOARD_planck_ez */
+#endif /* KEYBOARD_olkb_planck_ez */

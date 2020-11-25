@@ -5,15 +5,15 @@
 /**************************************************
 ** Include headers specific to keyboard revision **
 **************************************************/
-#ifdef KEYBOARD_preonic_rev1
+#ifdef KEYBOARD_olkb_preonic_rev1
   #include "rev1.h"
 #endif
 
-#ifdef KEYBOARD_preonic_rev2
+#ifdef KEYBOARD_olkb_preonic_rev2
   #include "rev2.h"
 #endif
 
-#ifdef KEYBOARD_preonic_rev3
+#ifdef KEYBOARD_olkb_preonic_rev3
   #include "rev3.h"
 #endif
 

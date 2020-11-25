@@ -17,7 +17,7 @@
 #pragma once
 
 #if defined(RGBLIGHT_ENABLE) && !defined(RGBLED_NUM)
-#    if defined(KEYBOARD_planck_light)
+#    if defined(KEYBOARD_olkb_planck_light)
 #        define RGB_DI_PIN A0
 #        define RGBLED_NUM 13  // Number of LEDs
 #    endif
@@ -40,7 +40,7 @@
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED true  // turn off effects when suspended
 #    undef RGB_MATRIX_LED_PROCESS_LIMIT
 #    undef RGB_MATRIX_LED_FLUSH_LIMIT
-#    ifdef KEYBOARD_planck_rev6
+#    ifdef KEYBOARD_olkb_planck_rev6
 #        define DRIVER_LED_TOTAL RGBLED_NUM
 #    endif
 #endif
@@ -51,7 +51,7 @@
 #    define EE_HANDS
 #endif
 
-#if !defined(KEYBOARD_planck_light)
+#if !defined(KEYBOARD_olkb_planck_light)
 #    ifdef RGBLIGHT_ENABLE
 #        define NO_MUSIC_MODE
 #    endif  // RGBLIGHT_ENABLE
@@ -65,15 +65,15 @@
 #    undef QMK_SPEAKER
 #    define QMK_SPEAKER B5
 #    define SOLENOID_PIN A1
-#endif  // KEYBOARD_planck_light
+#endif  // KEYBOARD_olkb_planck_light
 
-#if defined(KEYBOARD_planck)
+#if defined(KEYBOARD_olkb_planck)
 #    undef PRODUCT
-#    if defined(KEYBOARD_planck_light)
+#    if defined(KEYBOARD_olkb_planck_light)
 #        define PRODUCT Drashna Hacked RGB Beacon(Planck Light)
-#    elif defined(KEYBOARD_planck_rev6)
+#    elif defined(KEYBOARD_olkb_planck_rev6)
 #        define PRODUCT Drashna Hacked Planck Rev6
-#    elif defined(KEYBOARD_planck_ez)
+#    elif defined(KEYBOARD_olkb_planck_ez)
 #        define PRODUCT Drashna Hacked Planck EZ
 #    endif
 #endif

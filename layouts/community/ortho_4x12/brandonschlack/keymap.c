@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-#ifdef KEYBOARD_planck_rev6
+#ifdef KEYBOARD_olkb_planck_rev6
     #include "muse.h"
 #endif
 #include "brandonschlack.h"
@@ -109,7 +109,7 @@ void led_set_user(uint8_t usb_led) {
 }
 #endif
 
-#ifdef KEYBOARD_planck_rev6
+#ifdef KEYBOARD_olkb_planck_rev6
 #ifdef AUDIO_ENABLE
     float plover_song[][2]     = SONG(PLOVER_SOUND);
     float plover_gb_song[][2]  = SONG(PLOVER_GOODBYE_SOUND);

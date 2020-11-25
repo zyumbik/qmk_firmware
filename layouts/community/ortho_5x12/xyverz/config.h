@@ -9,7 +9,7 @@
 #ifndef RGBLIGHT_ENABLE
 #undef RGB_DI_PIN
 #endif
-#if defined(KEYBOARD_preonic_rev2)
+#if defined(KEYBOARD_olkb_preonic_rev2)
   #define RGB_DI_PIN B3
   #undef RGBLED_NUM
   #define RGBLIGHT_ANIMATIONS

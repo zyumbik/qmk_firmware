@@ -17,7 +17,7 @@
 
 #include "planck.h"
 
-#ifdef KEYBOARD_planck_ez_glow
+#ifdef KEYBOARD_olkb_planck_ez_glow
 #    include "glow.h"
 #endif
 

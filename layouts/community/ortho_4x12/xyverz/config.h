@@ -8,7 +8,7 @@
 #define EE_HANDS
 
 #undef RGBLED_NUM
-#if defined(KEYBOARD_planck_rev5)
+#if defined(KEYBOARD_olkb_planck_rev5)
   #define RGBLED_NUM 10
   #define RGB_DI_PIN D1
 #elif defined(KEYBOARD_keebio_levinson_rev2)

@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-#ifdef KEYBOARD_preonic_rev3
+#ifdef KEYBOARD_olkb_preonic_rev3
     #include "muse.h"
 #endif
 #include "brandonschlack.h"
@@ -104,7 +104,7 @@ layer_state_t layer_state_set_keymap(layer_state_t state) {
     return state;
 }
 
-#ifdef KEYBOARD_preonic_rev3
+#ifdef KEYBOARD_olkb_preonic_rev3
 #ifdef AUDIO_ENABLE
   float plover_song[][2]     = SONG(PLOVER_SOUND);
   float plover_gb_song[][2]  = SONG(PLOVER_GOODBYE_SOUND);

@@ -230,7 +230,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #endif
 
 // Disable LED on Rev6
-#ifdef KEYBOARD_planck_rev6
+#ifdef KEYBOARD_olkb_planck_rev6
 layer_state_t layer_state_set_user(layer_state_t state) {
   return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
@@ -283,12 +283,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #ifdef BACKLIGHT_ENABLE
           backlight_step();
         #endif
-        #ifdef KEYBOARD_planck_rev5
+        #ifdef KEYBOARD_olkb_planck_rev5
           writePinLow(E6);
         #endif
       } else {
         unregister_code(KC_RSFT);
-        #ifdef KEYBOARD_planck_rev5
+        #ifdef KEYBOARD_olkb_planck_rev5
           writePinHigh(E6);
         #endif
       }

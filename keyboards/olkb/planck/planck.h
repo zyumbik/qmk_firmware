@@ -5,21 +5,21 @@
 
 #define encoder_update(clockwise) encoder_update_user(uint8_t index, clockwise)
 
-#if defined(KEYBOARD_planck_ez)
+#if defined(KEYBOARD_olkb_planck_ez)
   #include "ez.h"
-#elif defined(KEYBOARD_planck_light)
+#elif defined(KEYBOARD_olkb_planck_light)
   #include "light.h"
-#elif defined(KEYBOARD_planck_rev1)
+#elif defined(KEYBOARD_olkb_planck_rev1)
   #include "rev1.h"
-#elif defined(KEYBOARD_planck_rev2)
+#elif defined(KEYBOARD_olkb_planck_rev2)
   #include "rev2.h"
-#elif defined(KEYBOARD_planck_rev3)
+#elif defined(KEYBOARD_olkb_planck_rev3)
   #include "rev3.h"
-#elif defined(KEYBOARD_planck_rev4)
+#elif defined(KEYBOARD_olkb_planck_rev4)
   #include "rev4.h"
-#elif defined(KEYBOARD_planck_rev5)
+#elif defined(KEYBOARD_olkb_planck_rev5)
   #include "rev5.h"
-#elif defined(KEYBOARD_planck_rev6)
+#elif defined(KEYBOARD_olkb_planck_rev6)
   #include "rev6.h"
 #endif // Planck revisions
 

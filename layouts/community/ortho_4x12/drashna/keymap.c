@@ -33,7 +33,7 @@ enum planck_keycodes {
 };
 #endif
 
-#ifdef KEYBOARD_planck_ez
+#ifdef KEYBOARD_olkb_planck_ez
 #    define PLNK_1 BK_LWER
 #    define PLNK_2 SP_LWER
 #    define PLNK_3 KC_NO
@@ -162,7 +162,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 #endif
-#ifdef KEYBOARD_planck_ez
+#ifdef KEYBOARD_olkb_planck_ez
         case TH_LVL:
             if (record->event.pressed) {
                 keyboard_config.led_level++;
@@ -196,7 +196,7 @@ bool music_mask_user(uint16_t keycode) {
 
 #ifdef RGB_MATRIX_ENABLE
 
-#    ifdef KEYBOARD_planck_rev6
+#    ifdef KEYBOARD_olkb_planck_rev6
 // clang-format off
 led_config_t g_led_config = {
     {
@@ -236,7 +236,7 @@ void rgb_matrix_indicators_user(void) {
     uint8_t this_led = host_keyboard_leds();
     uint8_t this_osm = get_oneshot_mods();
     bool    is_ez;
-#    ifdef KEYBOARD_planck_ez
+#    ifdef KEYBOARD_olkb_planck_ez
     is_ez = true;
 #    endif
 
@@ -332,7 +332,7 @@ void rgb_matrix_indicators_user(void) {
 }
 
 void matrix_init_keymap(void) {
-#    ifdef KEYBOARD_planck_light
+#    ifdef KEYBOARD_olkb_planck_light
     writePinLow(D6);
 #    endif
     // rgblight_mode(RGB_MATRIX_MULTISPLASH);
@@ -340,7 +340,7 @@ void matrix_init_keymap(void) {
 #else  // RGB_MATRIX_INIT
 
 void matrix_init_keymap(void) {
-#    if !defined(CONVERT_TO_PROTON_C) && !defined(KEYBOARD_planck)
+#    if !defined(CONVERT_TO_PROTON_C) && !defined(KEYBOARD_olkb_planck)
     setPinOutput(D5);
     writePinHigh(D5);
 
@@ -377,7 +377,7 @@ void encoder_update(bool clockwise) {
 }
 #endif  // ENCODER_ENABLE
 
-#ifdef KEYBOARD_planck_rev6
+#ifdef KEYBOARD_olkb_planck_rev6
 void dip_update(uint8_t index, bool active) {
     switch (index) {
         case 0:
@@ -402,9 +402,9 @@ void dip_update(uint8_t index, bool active) {
             break;
     }
 }
-#endif  // KEYBOARD_planck_rev6
+#endif  // KEYBOARD_olkb_planck_rev6
 
-#ifdef KEYBOARD_planck_ez
+#ifdef KEYBOARD_olkb_planck_ez
 layer_state_t layer_state_set_keymap(layer_state_t state) {
     planck_ez_left_led_off();
     planck_ez_right_led_off();

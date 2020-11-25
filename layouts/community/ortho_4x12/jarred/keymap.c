@@ -14,7 +14,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #ifdef RGB_MATRIX_ENABLE
 void rgb_matrix_indicators_user(void) {
-    #ifdef KEYBOARD_planck_light
+    #ifdef KEYBOARD_olkb_planck_light
     // Disable light in middle of 2U position of Planck Light
     rgb_matrix_set_color(42, 0, 0, 0);
     #endif

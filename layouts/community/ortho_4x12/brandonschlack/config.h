@@ -15,7 +15,7 @@
  */
 #pragma once
 
-#ifdef KEYBOARD_planck_rev6
+#ifdef KEYBOARD_olkb_planck_rev6
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PLANCK_SOUND)
     // #define STARTUP_SONG SONG(NO_SOUND)

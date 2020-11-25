@@ -15,7 +15,7 @@
  */
 #pragma once
 
-#ifdef KEYBOARD_preonic_rev3
+#ifdef KEYBOARD_olkb_preonic_rev3
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(PREONIC_SOUND)
     // #define STARTUP_SONG SONG(NO_SOUND)
