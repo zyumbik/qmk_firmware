@@ -1,0 +1,4 @@
+// Gergoplex specfic combos 
+
+COMB(s2sEscape,         KC_ESC,         KC_COMM, KC_DOT)
+COMB(s2sEnter,          KC_ENT,         KC_W,   KC_V)
