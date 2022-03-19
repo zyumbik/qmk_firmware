@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER   0x0001
 #define MANUFACTURER Work Louder
 #define PRODUCT      Nano Pad
+#define RGBLIGHT_LAYERS
 
 /* key matrix size */
 #define MATRIX_ROWS  1
