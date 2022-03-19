@@ -22,58 +22,82 @@
     { k00, k01,   k02, k00_a, k00_b } \
 }
 
-#define BASE 0 // default layer
-#define SYMB 1 // symbols
-#define NAVIG 2 // numbers/motion
-#define MEDIA 3 // media
-
-
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
-    [BASE] = LAYOUT_nano(
-        _______, KC_LSFT, MO(1),
+    [0] = LAYOUT_nano(
+        KC_NO, KC_LSFT, TG(1),
         KC_RIGHT, KC_LEFT
     ),
-    [SYMB] = LAYOUT_nano(
-        RESET,   _______, _______,
+    [1] = LAYOUT_nano(
+        RESET,   _______, TG(2),
         _______, _______
     ),
-    [NAVIG] = LAYOUT_nano(
-        _______, _______, _______,
+    [2] = LAYOUT_nano(
+        KC_NO, _______, TG(3),
         _______, _______
     ),
-    [MEDIA] = LAYOUT_nano(
-        _______, _______, _______,
+    [3] = LAYOUT_nano(
+        KC_NO, _______, TG(4),
         _______, _______
-    )
+    ),
+    [4] = LAYOUT_nano(
+        KC_NO, _______, TG(0),
+        _______, _______
+    ),
+    [5] = LAYOUT_nano(
+        KC_NO, _______, TG(0),
+        _______, _______
+    ),
+    [6] = LAYOUT_nano(
+        KC_NO, _______, TG(0),
+        _______, _______
+    ),
+    [7] = LAYOUT_nano(
+        KC_NO, _______, TG(0),
+        _______, _______
+    ),
 };
 
-// Light LEDs 6 to 9 and 12 to 15 red when caps lock is active. Hard to ignore!
-const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {6, 4, HSV_RED},       // Light 4 LEDs, starting with LED 6
-    {12, 4, HSV_RED}       // Light 4 LEDs, starting with LED 12
+// const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+//     {3, 3, HSV_RED},       // Right half: Light 3 LEDs, starting with LED 3
+//     {0, 3, HSV_BLUE}       // Left half: Light 3 LEDs, starting with LED 0
+// );
+
+const rgblight_segment_t PROGMEM my_layer0_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 6, 82, 190, 255}
 );
-// Light LEDs 9 & 10 in cyan when keyboard layer 1 is active
 const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {9, 2, HSV_CYAN}
+    {0, 6, 250, 120, 255}
 );
-// Light LEDs 11 & 12 in purple when keyboard layer 2 is active
 const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {11, 2, HSV_PURPLE}
+    {0, 6, HSV_PURPLE}
 );
-// Light LEDs 13 & 14 in green when keyboard layer 3 is active
 const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {13, 2, HSV_GREEN}
+    {0, 6, HSV_ORANGE}
 );
-// etc..
+const rgblight_segment_t PROGMEM my_layer4_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 6, HSV_BLUE}
+);
+const rgblight_segment_t PROGMEM my_layer5_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 6, HSV_YELLOW}
+);
+const rgblight_segment_t PROGMEM my_layer6_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 6, HSV_CYAN}
+);
+const rgblight_segment_t PROGMEM my_layer7_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 6, HSV_RED}
+);
 
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
-    my_capslock_layer,
-    my_layer1_layer,    // Overrides caps lock layer
-    my_layer2_layer,    // Overrides other layers
-    my_layer3_layer     // Overrides other layers
+    my_layer0_layer,    
+    my_layer1_layer,    
+    my_layer2_layer,
+    my_layer3_layer,
+    my_layer4_layer,
+    my_layer5_layer,
+    my_layer6_layer,
+    my_layer7_layer
 );
 
 void keyboard_post_init_user(void) {
@@ -81,28 +105,19 @@ void keyboard_post_init_user(void) {
     rgblight_layers = my_rgb_layers;
 }
 
-bool led_update_user(led_t led_state) {
-    rgblight_set_layer_state(0, led_state.caps_lock);
-    return true;
-}
-
 layer_state_t default_layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(1, layer_state_cmp(state, BASE));
+    rgblight_set_layer_state(0, layer_state_cmp(state, 0));
     return state;
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(2, layer_state_cmp(state, SYMB));
-    rgblight_set_layer_state(3, layer_state_cmp(state, NAVIG));
+    rgblight_set_layer_state(1, layer_state_cmp(state, 1));
+    rgblight_set_layer_state(2, layer_state_cmp(state, 2));
+    rgblight_set_layer_state(3, layer_state_cmp(state, 3));
+    rgblight_set_layer_state(4, layer_state_cmp(state, 4));
+    rgblight_set_layer_state(5, layer_state_cmp(state, 5));
+    rgblight_set_layer_state(6, layer_state_cmp(state, 6));
+    rgblight_set_layer_state(7, layer_state_cmp(state, 7));
     return state;
 }
 
-// led_config_t g_led_config = {
-//     {
-//         {  NO_LED, 1, 0 }
-//     }, {
-//         {  103,  32 }, {  122,  32 }
-//     }, {
-//         4, 4
-//     }
-// };
