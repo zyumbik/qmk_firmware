@@ -1,0 +1,19 @@
+{
+    "keyboard_name": "Sexypad", 
+    "url": "", 
+    "maintainer": "zyumbik",
+    "notes": "",
+
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"label":"Left", "x":0, "y":0},
+                {"label":"Right", "x":1.25, "y":0},
+
+                {"label":"Click E0", "x":0, "y":1.25},
+                {"label":"Click E1", "x":1.25, "y":1.25},
+                {"label":"Click E2", "x":3.5, "y":1.25},
+            ]
+        }
+    }
+}
