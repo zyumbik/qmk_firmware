@@ -7,12 +7,12 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        KC_MUTE, KC_MPLY, KC_MRWD, LT(1,KC_MFFD),
-        C(KC_Z), C(KC_X), C(KC_C), C(KC_V)
+        KC_A, KC_B, KC_C,
+        KC_D, KC_E, KC_F
     ),
     [1] = LAYOUT(
-        _______, _______, _______, _______,
-        QK_BOOT, _______, _______, _______
+        _______, _______, _______,
+        _______, QK_BOOT, _______
     )
 };
 
