@@ -10,7 +10,7 @@
     K10, K11  \
 ) \
 { \
-    { K00, K01, K02 }, \
+    { K00, K01, K02, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
     { K10, K11 }  \
 }
 
