@@ -5,7 +5,7 @@
 
 #include "big_l.h"
 
-#if !defined(VIA_ENABLE) && defined(ENCODER_ENABLE)
+#if !defined(ENCODERS) && defined(ENCODER_ENABLE)
 bool encoder_update_kb(uint8_t index, bool clockwise) {
     // if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {
@@ -28,33 +28,33 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         }
     } else if (index == 3) {
         if (clockwise) {
-            tap_code(KC_5);
+            tap_code(KC_7);
         } else {
-            tap_code(KC_6);
+            tap_code(KC_8);
         }
     } else if (index == 4) {
         if (clockwise) {
-            tap_code(KC_5);
+            tap_code(KC_9);
         } else {
-            tap_code(KC_6);
+            tap_code(KC_0);
         }
     } else if (index == 5) {
         if (clockwise) {
-            tap_code(KC_5);
+            tap_code(KC_A);
         } else {
-            tap_code(KC_6);
+            tap_code(KC_B);
         }
     } else if (index == 6) {
         if (clockwise) {
-            tap_code(KC_5);
+            tap_code(KC_C);
         } else {
-            tap_code(KC_6);
+            tap_code(KC_D);
         }
     } else if (index == 7) {
         if (clockwise) {
-            tap_code(KC_5);
+            tap_code(KC_E);
         } else {
-            tap_code(KC_6);
+            tap_code(KC_F);
         }
     }
     return true;

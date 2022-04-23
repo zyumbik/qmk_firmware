@@ -21,3 +21,5 @@ ENCODER_ENABLE = yes
 
 # OLED_ENABLE = yes
 # OLED_DRIVER = SH1106
+
+SRC += encoder_actions.c

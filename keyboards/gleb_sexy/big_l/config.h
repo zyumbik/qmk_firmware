@@ -14,8 +14,8 @@
 #define PRODUCT         Big L
 
 /* key matrix size */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 9
+#define MATRIX_ROWS 3
+#define MATRIX_COLS 8
 
 /* key matrix pins */
 #define DIRECT_PINS {   \
@@ -25,26 +25,36 @@
 }
 
 /*                       0   1   2   3   4   5   6   7    */
-#define ENCODERS_PAD_A { F5, F4, F4, F4, F4, F5, F5, F6 }
-#define ENCODERS_PAD_B { B1, F7, F5, B1, F6, F6, F7, F7 }
+#define ENCODERS_PAD_A { F5, F7, F4, F4, F4, F5, F5, F6 }
+#define ENCODERS_PAD_B { B1, F4, F5, B1, F6, F6, F7, F7 }
 
 #define ENCODER_RESOLUTION 4
 
 /* Definitions for encoder actions */
 
-#define ENCODERS 3
+#define ENCODERS 8
 
 #define ENCODERS_CW_KEY \
     {                   \
-        { 3, 0 },       \
-        { 5, 0 },       \
-        { 7, 0 }        \
+        { 0, 1 },       \
+        { 1, 1 },       \
+        { 2, 1 },       \
+        { 3, 1 },       \
+        { 4, 1 },       \
+        { 5, 1 },       \
+        { 6, 1 },       \
+        { 7, 1 }        \
     }
 #define ENCODERS_CCW_KEY \
     {                    \
-        { 4, 0 },        \
-        { 6, 0 },        \
-        { 8, 0 }         \
+        { 0, 2 },       \
+        { 1, 2 },       \
+        { 2, 2 },       \
+        { 3, 2 },       \
+        { 4, 2 },       \
+        { 5, 2 },       \
+        { 6, 2 },       \
+        { 7, 2 }        \
     }
 
 #define UNUSED_PINS
