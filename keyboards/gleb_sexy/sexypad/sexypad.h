@@ -7,10 +7,12 @@
 
 #define LAYOUT( \
     K00, K01, K02, \
+    K00_A, K01_A, K02_A, \
+    K00_B, K01_B, K02_B, \
     K10, K11  \
 ) \
 { \
-    { K00, K01, K02, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+    { K00, K01, K02, K00_A, K00_B, K01_A, K01_B, K02_A, K02_B }, \
     { K10, K11 }  \
 }
 
