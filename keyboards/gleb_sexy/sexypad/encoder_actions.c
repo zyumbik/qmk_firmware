@@ -17,7 +17,7 @@
 
 #include "encoder_actions.h"
 
-#if defined(VIA_ENABLE) && defined(ENCODER_ENABLE)
+#if defined(ENCODERS) && defined(ENCODER_ENABLE)
 
 #    ifdef ENCODERS
 static uint8_t  encoder_state[ENCODERS] = {0};

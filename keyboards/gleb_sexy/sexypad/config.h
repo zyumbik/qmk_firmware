@@ -53,3 +53,7 @@
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
+#define RGB_DI_PIN D1
+#define RGBLED_NUM 1
+#define RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RGB_TEST
