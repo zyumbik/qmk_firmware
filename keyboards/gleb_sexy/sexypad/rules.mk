@@ -4,6 +4,8 @@ MCU = atmega32u4
 # Bootloader selection
 BOOTLOADER = atmel-dfu
 
+SRC += encoder_actions.c
+
 # Build Options
 #   change yes to no to disable
 #
