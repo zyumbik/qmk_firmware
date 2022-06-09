@@ -1,5 +1,4 @@
-/* Copyright 2020 David Philip Barr <@davidphilipbarr>
- * Copyright 2021 @filterpaper
+/* Copyright 2022 <@zyumbik>
  * SPDX-License-Identifier: GPL-2.0+
  */
 
