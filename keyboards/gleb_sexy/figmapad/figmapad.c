@@ -19,12 +19,6 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
         } else {
             tap_code(KC_4);
         }
-    } else if (index == 2) {
-        if (clockwise) {
-            tap_code(KC_5);
-        } else {
-            tap_code(KC_6);
-        }
     }
     return true;
 }
