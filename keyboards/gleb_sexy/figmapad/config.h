@@ -21,10 +21,14 @@
 #define MATRIX_ROW_PINS { B6, B2 }
 #define MATRIX_COL_PINS { B5, B4, E6, D7, C6 }
 
+/* encoders */
 #define ENCODERS_PAD_A { B3, B3 }
 #define ENCODERS_PAD_B { B1, F7 }
 
 #define ENCODER_RESOLUTION 4
+
+/* oled */
+#define OLED_DISPLAY_128X64
 
 #define UNUSED_PINS
 
@@ -35,6 +39,3 @@
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
-
-/* */
-/* */
