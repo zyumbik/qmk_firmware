@@ -4,12 +4,31 @@
 
 #include QMK_KEYBOARD_H
 
+enum layer_names {
+    _BASE,
+    _SFT,
+    _AL,
+    _NAV
+};
+
 // Bottom, Middle, Top, Encoder Bottom, Encoder top
 // Joystick: Left, Right, Top, Bottom, Middlе
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(
-        KC_A, KC_B, KC_C, KC_D, KC_E,
-        KC_F, KC_G, KC_H, KC_I, KC_J
+    [_BASE] = LAYOUT(
+        KC_LEFT_GUI, MO(_AL), MO(_NAV), LSFT(2), LSFT(0),
+        KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN, OSL(_SFT)
+    ),
+    [_SFT] = LAYOUT(
+        KC_LEFT_GUI, MO(_AL), MO(_NAV), LSFT(2), LSFT(0),
+        S(KC_LEFT), S(KC_RIGHT), S(KC_UP), S(KC_DOWN), _______
+    ),
+    [_AL] = LAYOUT(
+        KC_LEFT_GUI, MO(_AL), MO(_NAV), LSFT(2), LSFT(0),
+        KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN, KC_LEFT_SHIFT
+    ),
+    [_NAV] = LAYOUT(
+        KC_LEFT_GUI, MO(_AL), MO(_NAV), LSFT(2), LSFT(0),
+        KC_LEFT, KC_RIGHT, KC_UP, KC_DOWN, KC_LEFT_SHIFT
     )
 };
 
