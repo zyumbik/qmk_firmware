@@ -22,8 +22,8 @@
 #define MATRIX_COL_PINS { B5, B4, E6, D7, C6 }
 
 /* encoders */
-#define ENCODERS_PAD_A { B1, F7 }
-#define ENCODERS_PAD_B { B3, B3 }
+#define ENCODERS_PAD_A { B3, F7 }
+#define ENCODERS_PAD_B { B1, B3 }
 
 #define ENCODER_RESOLUTION 4
 
