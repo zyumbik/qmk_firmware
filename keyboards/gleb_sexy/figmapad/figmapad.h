@@ -4,7 +4,7 @@
 
 #include "quantum.h"
 
-// Bottom, Middle, Top, Encoder Bottom, Encoder top
+// Bottom, Middle, Top, Encoder Bottom, Encoder Top
 // Joystick: Left, Right, Top, Bottom, Middlе
 #define LAYOUT( \
     K00, K01, K03, K04, K02 , \
