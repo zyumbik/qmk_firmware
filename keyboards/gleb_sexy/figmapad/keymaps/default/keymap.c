@@ -22,15 +22,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LSFT(KC_ENTER), KC_ENTER, LSFT(KC_TAB), KC_TAB, LALT(KC_L)
     ),
     [_NAVIGATE] = LAYOUT(
-        KC_LEFT_GUI, KC_LEFT_ALT, TO(_BASE), LALT(KC_8), LALT(KC_9),
-        LSFT(KC_ENTER), KC_ENTER, LSFT(KC_TAB), KC_TAB, _______
+        LALT(KC_H), KC_LEFT_ALT, TO(_BASE), LALT(KC_8), LALT(KC_9),
+        LALT(KC_A), LALT(KC_D), LALT(KC_W), LALT(KC_S), LALT(KC_V)
     ),
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_BASE] = { 
-        ENCODER_CCW_CW(LGUI(KC_MS_WH_UP), LGUI(KC_MS_WH_DOWN)), 
+        ENCODER_CCW_CW(LGUI(KC_MINUS), LGUI(KC_EQUAL)), 
         ENCODER_CCW_CW(LGUI(KC_Z), LSFT(LGUI(KC_Z)))
     },
     [_HIERARCHY] = { 
