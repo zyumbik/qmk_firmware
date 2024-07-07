@@ -1,0 +1,1 @@
+#define AZOTEQ_IQS5XX_TPS43
