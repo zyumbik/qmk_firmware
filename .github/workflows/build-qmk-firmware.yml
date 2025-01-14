@@ -1,0 +1,27 @@
+name: QMK Keyboard Firmware Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Build Firmware
+        uses: justgook/qmk-build@v1
+        with:
+          keymap-path: "keyboards/glebsexy/skull/keymaps/gleb"
+          keyboard: "glebsexy/skull"
+          keymap: "gleb"
+
+      - name: Upload Firmware
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: firmware
+          path: build
