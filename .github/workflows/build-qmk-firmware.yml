@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.ref }} # Check out the branch or tag that triggered the workflow
 
       - name: Build Firmware
-        uses: justgook/qmk-build@v1
+        uses: Soryyyn/qmk-build@v1.2
         with:
           keymap-path: "keyboards/glebsexy/skull/keymaps/gleb"
           keyboard: "glebsexy/skull"
