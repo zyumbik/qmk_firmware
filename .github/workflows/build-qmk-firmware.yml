@@ -3,7 +3,6 @@ name: QMK Keyboard Firmware Build
 on:
   push:
     branches:
-      - main
   pull_request:
 
 jobs:
