@@ -1,29 +1,25 @@
-name: QMK Keyboard Firmware Build
+name: Build QMK Keyboard Firmware
 
 on:
   push: # Trigger on all branch pushes
-  # pull_request: # Trigger on pull requests to any branch
+  pull_request: # Trigger on pull requests to any branch
 
 jobs:
-  build:
+  build-qmk:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # Fetch full history to access all branches
-          ref: ${{ github.ref }} # Check out the branch or tag that triggered the workflow
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Build Firmware
-        uses: Soryyyn/qmk-build@v1.2
+      - name: Build QMK Firmware
+        uses: d3adb5/build-qmk-fw@v1
         with:
-          keymap-path: "keyboards/glebsexy/skull/keymaps/gleb"
-          keyboard: "glebsexy/skull"
-          keymap: "gleb"
+          keyboard: glebsexy/skull
+          keymap: gleb
 
       - name: Upload Firmware
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v4
         with:
-          name: firmware
-          path: build
+          name: built-images
+          path: qmk-output
