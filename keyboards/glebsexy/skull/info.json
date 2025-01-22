@@ -32,6 +32,15 @@
                     ["GP2", "GP29", null, null, null]                    
                 ]
             }
+        },
+        "usb_detect": {
+            "enabled": true,
+            "polling_interval": 10,
+            "timeout": 1000
+        },
+        "transport": {
+            "watchdog": true,
+            "watchdog_timeout": 2000
         }
     },
     "processor": "RP2040",
