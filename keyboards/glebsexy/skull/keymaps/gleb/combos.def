@@ -38,5 +38,9 @@ COMB(ioRbrc,      KC_RBRC,               KC_I, KC_O) // ъ
 // commands
 COMB(bvUndo,      RGUI(KC_Z),            KC_B, KC_V) // undo
 COMB(ertF19,      KC_F19,                KC_R, KC_T, KC_E) // fullscreen
-COMB(yiF2,        KC_F2,                 KC_Y, KC_I) // screenshot
+// COMB(yiF2,        KC_F2,                 KC_Y, KC_I) // screenshot
+COMB(uioF2,       KC_F2,                 KC_U, KC_I, KC_O) // screenshot part of screen
+COMB(mcdF1,       KC_F1,                 KC_M, KC_COMM, RCTL_T(KC_DOT)) // screenshot full
+COMB(yipCtrlF2,   RCTL(KC_F2),           KC_Y, KC_I, RCMD_T(KC_P)) // screenshot to file
+COMB(cdsCtrlF1,   RCTL(KC_F1),           KC_COMM, RCTL_T(KC_DOT), RALT_T(KC_SCLN)) // full screenshot to file
 COMB(kjlCmdSpc,   RGUI(KC_SPC),          KC_J, KC_K, KC_L) // language switch
