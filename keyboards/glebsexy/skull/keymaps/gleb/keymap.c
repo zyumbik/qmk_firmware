@@ -45,9 +45,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
 
     [GAME] = LAYOUT_split_3x5_2(
-        KC_TAB,    KC_Q,       KC_W,       KC_E,       KC_R,         _______,  _______,  KC_UP,   _______,   _______,
-        KC_LCTL,  KC_A,       KC_S,       KC_D,       KC_F,         _______,  KC_LEFT, KC_DOWN, KC_RIGHT,   _______,
-        KC_LSFT, KC_Z,       KC_X,       KC_C,       KC_V,         _______,  KC_J,    KC_I,    KC_K,       KC_L,
+        KC_TAB,    KC_Q,       KC_W,       KC_E,       KC_1,         KC_NO,  KC_NO,   KC_UP,   KC_NO,      KC_NO,
+        KC_LCMD,   KC_A,       KC_S,       KC_D,       KC_F,         KC_NO,  KC_LEFT, KC_DOWN, KC_RIGHT,   KC_NO,
+        KC_LSFT,   KC_Z,       KC_X,       KC_C,       KC_0,         KC_NO,  KC_J,    KC_I,    KC_K,       KC_L,
         KC_LALT,   KC_SPC,     // left
         KC_SPC,    KC_RSFT     // right
         ),
