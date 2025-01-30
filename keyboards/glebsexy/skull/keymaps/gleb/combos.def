@@ -12,6 +12,8 @@ COMB(klDel,       KC_DEL,                KC_K, KC_L) // forward delete
 COMB(kjSpace,     KC_SPC,                KC_K, KC_J) // space
 // COMB(arrUp,       KC_UP,                 KC_E, KC_R) // ↑ arrow up // don't set er combo as it's a common roll
 // COMB(arrDn,       KC_DOWN,               KC_D, KC_F) // ↓ arrow down
+COMB(arrUp,       KC_UP,                 LALT_T(KC_C), KC_D) // ↑ arrow up CD
+COMB(arrDn,       KC_DOWN,               KC_F, KC_V) // ↓ arrow down FV
 COMB(arrRght,     KC_RIGHT,              KC_R, KC_F) // → arrow right
 COMB(arrLft,      KC_LEFT,               KC_E, KC_D) // ← arrow left
 COMB(kiAltRight,  RALT(KC_RIGHT),        KC_K, KC_I) // alt right (move, select, tabs, etc.)
